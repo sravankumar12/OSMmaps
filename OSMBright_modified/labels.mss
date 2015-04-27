@@ -59,7 +59,7 @@
     text-wrap-width: 50;
   }
   [zoom=8] {
-    text-size:11 + @text_adjust;
+    text-size:12 + @text_adjust;
     text-wrap-width: 50;
     text-line-spacing: 1;
   }
@@ -77,13 +77,13 @@
 
 /* ---- Cities ------------------------------------------------------ */
 
-#place::city[type='city'][zoom>=8][zoom<=14] {
+#place::city[type='city'][zoom>=5][zoom<=14] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
   text-fill:@city_text;
   [zoom<=8] {
-    text-size: 10;
+    text-size: 9;
   }
   [zoom=9] {
     text-size:10;
@@ -145,11 +145,6 @@
     text-line-spacing: 3;
   }
   [zoom>=15]{
-    text-size:14;
-    text-character-spacing: 3;
-    text-line-spacing: 4;
-  }
-  [zoom>=15]{
     text-size:15;
     text-character-spacing: 4;
     text-line-spacing: 5;
@@ -173,12 +168,13 @@
   text-size:10;
   text-wrap-width: 30;
   [zoom>=14] {
-    text-size:11;
+    text-size:10;
     text-character-spacing: 1;
     text-wrap-width: 40;
     text-line-spacing: 1;
   }
   [zoom>=15] {
+    text-size:12;
     text-transform: uppercase;
     text-character-spacing: 1;
     text-wrap-width: 60;
@@ -288,7 +284,7 @@
   [zoom=16][area>20000],
   [zoom=17][area>5000] {
     text-name: "[name]";
-    text-size: 13;
+    text-size: 12;
     text-wrap-width: 60;
     text-character-spacing: 1;
     text-halo-radius: 0.5;
@@ -296,15 +292,15 @@
   [zoom=15][area>1600000],
   [zoom=16][area>80000],
   [zoom=17][area>20000] {
-    text-size: 15;
+    text-size: 13;
     text-character-spacing: 2;
-    text-wrap-width: 120;
+    text-wrap-width: 110;
   }
   [zoom>=16][area>1600000],
   [zoom>=17][area>80000] {
-    text-size: 20;
-    text-character-spacing: 3;
-    text-wrap-width: 180;
+    text-size: 15;
+    text-character-spacing: 2;
+    text-wrap-width: 140;
   }
 }
 
