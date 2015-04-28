@@ -11,13 +11,15 @@ f = open('render_map_gen_file.sh', 'w')
 
 areas_coordinates = (
 	(28.6200, 77.3200), #delhi
-	(28.6200, 77.3200) #delhi
+	(12.9667, 77.5667) #banglore
 )
 
+workers = 4
 for coordinate in areas_coordinates:
-  for zoom in range(7, 17):
+  for zoom in range(7, 18):
     result = deg2num(coordinate[0], coordinate[1], zoom)
     inc_dec_var = 2 + 4*(zoom - 6)
-    f.write("render_list -a -n 5 -x " + str(result[0] - inc_dec_var) + " -X " + str(result[0] + inc_dec_var) + " -y " + str(result[1] - inc_dec_var) + " -Y " + str(result[1] + inc_dec_var) + " -z " + str(zoom) + " -Z " + str(zoom) + "\n")
+    f.write("render_list -a -n " + str(workers) + " -x " + str(result[0] - inc_dec_var) + " -X " + str(result[0] + inc_dec_var) + " -y " + str(result[1] - inc_dec_var) + " -Y " + str(result[1] + inc_dec_var) + " -z " + str(zoom) + " -Z " + str(zoom) + "\n")
+    f.write("render_list -a -n " + str(workers) + " -x " + str(result[0] - inc_dec_var) + " -X " + str(result[0] + inc_dec_var) + " -y " + str(result[1] - inc_dec_var) + " -Y " + str(result[1] + inc_dec_var) + " -z " + str(zoom) + " -Z " + str(zoom) + " -m 'style_retina'\n")
 
 f.close();
