@@ -17,8 +17,7 @@
   polygon-gamma: 0.75;
 }
 #land-low[zoom>=0][zoom<10],
-#land-high[zoom>=10],
-#countries[zoom<9] {
+#countries[zoom<10] {
   line-color:@country_outline;
   line-width:0.5;
 }
