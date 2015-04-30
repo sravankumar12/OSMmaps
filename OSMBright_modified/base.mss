@@ -24,7 +24,7 @@
 
 #landuse_gen0[zoom>3][zoom<=9],
 #landuse_gen1[zoom>9][zoom<=12],
-#landuse[zoom>12], #countries {
+#landuse[zoom>12] {
   [type='cemetery']      { polygon-fill: @cemetery; }
   [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
