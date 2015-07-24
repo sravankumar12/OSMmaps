@@ -18,7 +18,7 @@ f = open('render_map_gen_file.sh', 'w')
 #	'217': ((-10.611348, 111.250221), (-44.648631, 157.129125)) #Australia
 #}
 
-
+ 
 # These are simple city's center coordinates.
 # Using these coordinates, we create tiles around the place
 areas_coordinates = (
