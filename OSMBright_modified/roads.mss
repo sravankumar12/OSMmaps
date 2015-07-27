@@ -6,8 +6,10 @@
 and trunks. */
 
 #roads_low[zoom>=5][zoom<=8] {
-  [type='motorway'] { line-color: @motorway_line; }
-  [type='trunk'] { line-color: @trunk_line; }
+  //[type='motorway'] { line-color: @motorway_line; }
+  [type='motorway'] { line-color: @motorway_fill; }
+  //[type='trunk'] { line-color: @trunk_line; }
+  [type='trunk'] { line-color: @motorway_fill; }
   [zoom=5] {
     [type='motorway'] { line-width: 0.4; }
     [type='trunk'] { line-width: 0.2; } }
@@ -28,11 +30,13 @@ as well. */
 #roads_med[zoom>=9][zoom<=10] {
   [type='motorway'],
   [type='motorway_link'] {
-    line-color: @motorway_line;
+  //  line-color: @motorway_line;
+    line-color: @motorway_fill;
   }
   [type='trunk'],
   [type='trunk_link'] {
-    line-color: @trunk_line;
+  //  line-color: @trunk_line;
+    line-color: @motorway_fill;
   }
   [type='primary'] { line-color: @primary_line; }
   [type='secondary'] { line-color: @secondary_line; }
