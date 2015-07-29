@@ -28,11 +28,13 @@ as well. */
 #roads_med[zoom>=9][zoom<=10] {
   [type='motorway'],
   [type='motorway_link'] {
-    line-color: @motorway_line;
+  //  line-color: @motorway_line;
+    line-color: @motorway_fill;
   }
   [type='trunk'],
   [type='trunk_link'] {
-    line-color: @trunk_line;
+  //  line-color: @trunk_line;
+    line-color: @trunk_fill;
   }
   [type='primary'] { line-color: @primary_line; }
   [type='secondary'] { line-color: @secondary_line; }
