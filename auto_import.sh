@@ -31,3 +31,10 @@ sudo /etc/init.d/apache2 restart
 export LC_ALL="en_US.UTF-8"
 
 sudo /etc/init.d/renderd restart
+
+#script to generate tiles
+cd /usr/local/share/maps/style/OSMmaps/
+
+python generate_map_tile_coord.py
+
+./render_map_gen_file.sh
